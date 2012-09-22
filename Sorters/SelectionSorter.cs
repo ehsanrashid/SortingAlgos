@@ -29,7 +29,7 @@ namespace SortingAlgos.Sorters
 
         public static void Sort(IList<T> list, int beg, int end, int step, IComparer<T> comparer)
         {
-            if (beg < 0) beg = 0;
+            if (0 > beg) beg = 0;
             if (end >= list.Count) end = list.Count - 1;
             if (beg > end) beg = end;
             if (step <= 0) step = 1;
@@ -106,11 +106,14 @@ namespace SortingAlgos.Sorters
             //Console.WriteLine("swap :" + swap);
         }
 
+/*
         private static int RemoveDup(IList<T> list, int beg, int end, IComparer<T> comparer, T maxValue)
         {
             while (beg < end && comparer.Compare(list[end], maxValue) == 0)
                 --end;
             return end;
         }
+*/
+
     }
 }

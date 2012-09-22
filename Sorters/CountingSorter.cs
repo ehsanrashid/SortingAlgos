@@ -74,6 +74,7 @@ namespace SortingAlgos.Sorters
             // --------------------------------------------
         }
 
+/*
         static void ScratchFill(IList<int> list, IList<int> counts, int beg, int end, int minValue)
         {
             var size = counts.Count;
@@ -86,5 +87,7 @@ namespace SortingAlgos.Sorters
             for (var index = beg; index <= end; ++index)
                 list[index] = scratch[index];
         }
+*/
+
     }
 }

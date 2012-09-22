@@ -23,20 +23,19 @@ namespace SortingAlgos.Sorters
 
         public static void Sort(IList<T> list, int beg, int end, IComparer<T> comparer)
         {
-            if (beg < 0) beg = 0;
+            if (0 > beg) beg = 0;
             if (end >= list.Count) end = list.Count - 1;
             if (beg > end) beg = end;
-            if (comparer.Compare(list[beg], list[end]) > 0)
-                Swap(list, beg, end);
+
+            if (comparer.Compare(list[beg], list[end]) > 0) Swap(list, beg, end);
             var size = end - beg + 1;
 
-            if (size >= 3)
-            {
-                var trd = size/3;
-                Sort(list, beg, end - trd, comparer);
-                Sort(list, beg + trd, end, comparer);
-                Sort(list, beg, end - trd, comparer);
-            }
+            if (size < 3) return;
+
+            var trd = size / 3;
+            Sort(list, beg, end - trd, comparer);
+            Sort(list, beg + trd, end, comparer);
+            Sort(list, beg, end - trd, comparer);
         }
 
     }

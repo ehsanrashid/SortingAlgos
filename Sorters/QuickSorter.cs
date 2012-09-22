@@ -10,7 +10,7 @@ namespace SortingAlgos.Sorters
     public sealed class QuickSorter<T> : Sorter<T>
     {
         //an arbitrary limit to when we call Selection/Insertion Sort
-        const Int32 CutOff = 4;
+        const Int32 CutOff = 5;
 
         /// <summary>
         ///   Sorts the specified list.
@@ -30,23 +30,28 @@ namespace SortingAlgos.Sorters
 
         static void QuickSort(IList<T> list, int beg, int end, IComparer<T> comparer)
         {
-            if (beg < 0) beg = 0;
+            if (0 > beg) beg = 0;
             if (end >= list.Count) end = list.Count - 1;
             if (beg > end) beg = end;
+
             if (beg < end)
-                if (end - beg <= CutOff)
-                    if (end - beg + 1 <= 3)
-                        // manual sort if data <= 3
+            {
+                var size = end - beg + 1;
+                if (size < CutOff)
+                {
+                    if (size <= 3) // manual sort if data <= 3
                         ManualSort(list, beg, end, comparer);
                     else
                         //SelectionSorter<T>.Sort(list, beg, end, 1, comparer);
                         InsertionSorter<T>.Sort(list, beg, end, 1, comparer);
+                }
                 else
                 {
                     var pivot = GetPivot(list, beg, end, comparer);
                     QuickSort(list, beg, pivot - 1, comparer);
                     QuickSort(list, pivot + 1, end, comparer);
                 }
+            }
         }
 
         static int GetPivot(IList<T> list, int beg, int end, IComparer<T> comparer)
@@ -66,6 +71,7 @@ namespace SortingAlgos.Sorters
                     ++pivotIndex;
                     Swap(list, pivotIndex, index);
                 }
+
             Swap(list, beg, pivotIndex);
             return pivotIndex;
         }

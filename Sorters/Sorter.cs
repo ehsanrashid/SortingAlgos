@@ -37,7 +37,7 @@ namespace SortingAlgos.Sorters
         /// <param name="list"> The list. </param>
         public void Sort(IList<T> list)
         {
-            if (list == null) throw new ArgumentNullException("list");
+            if (null == list) throw new ArgumentNullException("list");
             Sort(list, Comparer<T>.Default);
         }
 
@@ -91,7 +91,7 @@ namespace SortingAlgos.Sorters
 
         protected static void Fill(IList<T> list, int beg, int end, T value)
         {
-            if (list == null) throw new ArgumentNullException("array");
+            if (null == list) throw new ArgumentNullException("array");
             if (0 > beg || beg > end) throw new ArgumentOutOfRangeException("beg");
             if (end > list.Count) throw new ArgumentOutOfRangeException("end");
             for (var index = beg; index < end; ++index)

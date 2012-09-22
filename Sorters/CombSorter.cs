@@ -7,7 +7,7 @@ namespace SortingAlgos.Sorters
     using System.Collections.Generic;
 
     /// <summary>
-    /// A comb sorter.  
+    /// A Comb sorter.  
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public sealed class CombSorter<T> : Sorter<T>

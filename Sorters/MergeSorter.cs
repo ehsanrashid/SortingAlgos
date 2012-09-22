@@ -22,7 +22,7 @@ namespace SortingAlgos.Sorters
 
         static void MergeSort(IList<T> list, int beg, int end, IComparer<T> comparer)
         {
-            if (beg < 0) beg = 0;
+            if (0 > beg) beg = 0;
             if (end >= list.Count) end = list.Count - 1;
             if (beg > end) beg = end;
             if (beg >= end) return;
