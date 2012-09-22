@@ -1,0 +1,26 @@
+Exchange sorts	
+Bubblesort Cocktailsort Odd–evensort Combsort Gnomesort Quicksort Stoogesort Bogosort
+
+Selection sorts	
+Selectionsort Heapsort Smoothsort CartesianTreesort Tournamentsort Cyclesort
+
+Insertion sorts	
+Insertionsort Shellsort Treesort Librarysort Patiencesort
+
+Merge sorts	
+Mergesort Polyphase mergesort Strandsort
+
+Distribution sorts	
+American flagsort Beadsort Bucketsort Burstsort Countingsort Pigeonholesort Proxmapsort Radixsort Flashsort
+
+Concurrent sorts	
+Bitonic sorter Batcher odd–even mergesort Pairwise sorting network
+
+Hybrid sorts	
+Timsort Introsort Spreadsort UnShufflesort JSort
+
+Quantum sorts	
+Spaghettisort
+
+Other	
+Bogosort Topologicalsort Pancakesort
