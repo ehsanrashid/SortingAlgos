@@ -1,7 +1,3 @@
-/*
- * Adapted from http://www.cs.rit.edu/~atk/Java/Sorting/sorting.html
- */
-
 namespace SortingAlgos.Sorters
 {
     using System;

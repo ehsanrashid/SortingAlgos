@@ -1,6 +1,3 @@
-/*
- * Adapted from wikipedia : http://en.wikipedia.org/wiki/Comb_sort
- */
 namespace SortingAlgos.Sorters
 {
     using System;

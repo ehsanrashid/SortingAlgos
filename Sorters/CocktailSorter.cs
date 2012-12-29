@@ -1,6 +1,3 @@
-/*
- * Adapted from http://en.wikipedia.org/wiki/Cocktail_sort.
- */
 using System;
 using System.Collections.Generic;
 

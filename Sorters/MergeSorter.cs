@@ -1,7 +1,3 @@
-/*
- * Adapted from CSSorters : http://web6.codeproject.com/cs/algorithms/cssorters.asp
- */
-
 namespace SortingAlgos.Sorters
 {
     using System;
