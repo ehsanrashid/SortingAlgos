@@ -34,11 +34,12 @@ namespace SortingAlgos.Sorters
                 #region Old
 
                 //var swapped = false;
-                //for (var index = beg; index < end; index += step)
+                //for (var curr = beg; curr < end; curr += step)
                 //{
-                //    if (comparer.Compare(list[index], list[index + step]) <= 0) continue;
+                //    var next = curr + step;
+                //    if (comparer.Compare(list[curr], list[next]) <= 0) continue;
 
-                //    Swap(list, index, index + step);
+                //    Swap(list, curr, next);
                 //    swapped = true;
                 //}
                 //if (!swapped)
