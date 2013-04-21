@@ -34,6 +34,9 @@ namespace SortingAlgos.Sorters
             if (beg > end) beg = end;
             if (step <= 0) step = 1;
 
+            var pass = 0;
+            var swap = 0;
+
             while (beg < end)
             {
                 var min = beg;
@@ -43,11 +46,15 @@ namespace SortingAlgos.Sorters
                     if (comparer.Compare(list[index], list[min]) < 0) min = index;
                     if (comparer.Compare(list[index], list[max]) > 0) max = index;
                 }
-                if (min != beg) Swap(list, min, beg);
-                if (max != end) Swap(list, max, end);
+                if (min != beg) { Swap(list, min, beg); ++swap; }
+                if (max != end) { Swap(list, max, end); ++swap; }
                 ++beg;
                 --end;
+                ++pass;
             }
+
+            Console.WriteLine("pass :" + pass);
+            Console.WriteLine("swap :" + swap);
         }
     }
 }

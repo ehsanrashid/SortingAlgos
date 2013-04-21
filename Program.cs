@@ -10,7 +10,7 @@ namespace SortingAlgos
         {
             Sorter<int> sorter = new
                 //BubbleSorter<int>();
-                SelectionSorter<int>();
+            SelectionSorter<int>();
             //BiSelectionSorter<int>();    
             //InsertionSorter<int>();
             //ShellSorter<int>();
@@ -31,19 +31,19 @@ namespace SortingAlgos
 
         static void TestSorter(ISorter<int> sorter)
         {
-            var arr = new[]
-                //{ 8, 4, 3, 2, 5, 9, 6, 7, 1 };
-                //{ 1, 2, 3, 4, 5, 7, 8, 9 };
-                //{ 3, 2, 1, 9, 8, 7 };
-                          {1, 6, 5, 5, 2, 1, 2, 6, 5, 5, 6};
-            
+            var arr = new[] 
+            { 8, 4, 3, 2, 5, 9, 6, 7, 1 };
+            //{ 1, 2, 3, 4, 5, 7, 8, 9 };
+            //{ 3, 2, 1, 9, 8, 7 };
+            //{1, 6, 5, 5, 2, 1, 2, 6, 5, 5, 6};
+
             var list = new List<int>(arr);
-            
+
             foreach (var i in list)
                 Console.Write(" " + i);
-            
+
             Console.WriteLine();
-            
+
             sorter.Sort(list);
 
             foreach (var i in list)

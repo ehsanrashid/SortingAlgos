@@ -32,6 +32,9 @@ namespace SortingAlgos.Sorters
             if (end >= list.Count) end = list.Count - 1;
             if (beg > end) beg = end;
 
+            var pass = 0;
+            var swap = 0;
+
             var gap = end - beg + 1;
             var swapped = false;
             while (gap > 1 || swapped)
@@ -44,14 +47,22 @@ namespace SortingAlgos.Sorters
                 }
                 swapped = false;
                 var curr = beg;
-                for (var next = curr + gap; next <= end; ++next)
+                while (curr + gap <= end)
                 {
-                    if (comparer.Compare(list[curr], list[next]) <= 0) continue;
-
-                    Swap(list, curr, next);
-                    swapped = true;
+                    var next = curr + gap;
+                    if (comparer.Compare(list[curr], list[next]) > 0)
+                    {
+                        Swap(list, curr, next);
+                        swapped = true;
+                        ++swap;
+                    }
+                    curr = next;
+                    ++pass;
                 }
             }
+
+            Console.WriteLine("pass :" + pass);
+            Console.WriteLine("swap :" + swap);
         }
     }
 }

@@ -33,7 +33,8 @@ namespace SortingAlgos.Sorters
             if (end >= list.Count) end = list.Count - 1;
             if (beg > end) beg = end;
             if (step <= 0) step = 1;
-            
+
+            var pass = 0;
             var swap = 0;
 
             #region Selection
@@ -52,6 +53,7 @@ namespace SortingAlgos.Sorters
                     Swap(list, beg, min);
                     ++swap;
                 }
+                ++pass;
                 ++beg;
                 #endregion
 
@@ -103,7 +105,8 @@ namespace SortingAlgos.Sorters
             */
             #endregion
 
-            //Console.WriteLine("swap :" + swap);
+            Console.WriteLine("pass :" + pass);
+            Console.WriteLine("swap :" + swap);
         }
 
 /*

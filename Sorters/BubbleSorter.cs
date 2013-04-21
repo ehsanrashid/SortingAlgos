@@ -11,7 +11,6 @@ namespace SortingAlgos.Sorters
             if (null == comparer) throw new ArgumentNullException("comparer");
             if (1 >= list.Count) return;
 
-
             var beg = 0;
             var end = list.Count - 1;
             var step = 1;
@@ -79,7 +78,8 @@ namespace SortingAlgos.Sorters
                 ++pass;
             }
 
-            //Console.WriteLine("swap :" + swap);
+            Console.WriteLine("pass :" + pass);
+            Console.WriteLine("swap :" + swap);
         }
 
     }

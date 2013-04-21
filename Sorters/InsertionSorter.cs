@@ -30,6 +30,9 @@ namespace SortingAlgos.Sorters
             if (beg > end) beg = end;
             if (step <= 0) step = 1;
 
+            var pass = 0;
+            var swap = 0;
+
             // --------------------------------------------------
             //for (var curr = beg + step; curr <= end; curr += step)
             //{
@@ -50,9 +53,10 @@ namespace SortingAlgos.Sorters
             for (var curr = beg + step; curr <= end; curr += step)
                 if (comparer.Compare(list[min], list[curr]) > 0)
                     min = curr;
-
+            
             Swap(list, beg, min);
             ++beg;
+            ++swap;
 
             // list[0]-list[1] sorted
             // list[2]-list[n] not sorted
@@ -62,14 +66,18 @@ namespace SortingAlgos.Sorters
 
                 min = curr - step;
                 if (comparer.Compare(value, list[min]) >= 0) continue;
-                while (comparer.Compare(value, list[min]) < 0)
+                while (min >= 0 && comparer.Compare(value, list[min]) < 0)
                 {
                     list[min + step] = list[min];
                     min -= step;
+                    ++swap;
                 }
                 list[min + step] = value;
+                ++pass;
             }
 
+            Console.WriteLine("pass :" + pass);
+            Console.WriteLine("swap :" + swap);
         }
 
 
