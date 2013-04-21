@@ -10,7 +10,7 @@ namespace SortingAlgos
         {
             Sorter<int> sorter = new
                 //BubbleSorter<int>();
-            SelectionSorter<int>();
+            //SelectionSorter<int>();
             //BiSelectionSorter<int>();    
             //InsertionSorter<int>();
             //ShellSorter<int>();
@@ -21,7 +21,7 @@ namespace SortingAlgos
             //MergeSorter<int>();
             //OddEvenTransportSorter<int>();
             //QuickSorter<int>();
-            //ShakerSorter<int>();
+            ShakerSorter<int>();
             //StoogeSorter<int>();
             //CountingSorter();
             //BucketSorter();
